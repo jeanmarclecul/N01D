@@ -3,14 +3,18 @@ import settings
 
 
 class paddle:
-    def __init__(self, xpos, ypos, xspeed, yspeed, size, life, controler):
+    def __init__(
+        self, xpos, ypos, xspeed, yspeed, xsize, ysize, life, controler, color
+    ):
         self.xpos = xpos
         self.ypos = ypos
         self.xspeed = xspeed
         self.yspeed = yspeed
-        self.size = size
+        self.xsize = xsize
+        self.ysize = ysize
         self.life = life
         self.controler = controler
+        self.color = color
 
     def get_xpos(self):
         return self.xpos
@@ -18,11 +22,17 @@ class paddle:
     def get_ypos(self):
         return self.ypos
 
-    def get_speed(self):
-        return self.speed
+    def get_xspeed(self):
+        return self.xspeed
 
-    def get_size(self):
-        return self.size
+    def get_yspeed(self):
+        return self.yspeed
+
+    def get_xsize(self):
+        return self.xsize
+
+    def get_ysize(self):
+        return self.ysize
 
     def get_life(self):
         return self.life
@@ -30,9 +40,12 @@ class paddle:
     def get_controler(self):
         return self.controler
 
-    def draw_paddle(self, screen, color):
-        pypaddle = pygame.Rect(self.xpos, self.ypos, self.size, 10)
-        pygame.draw.rect(screen, color, pypaddle)
+    def get_color(self):
+        return self.color
+
+    def draw_paddle(self, screen):
+        pypaddle = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
+        pygame.draw.rect(screen, self.color, pypaddle)
 
     def move(self, dir):
         if dir == "LEFT":
@@ -47,7 +60,16 @@ class paddle:
             self.xpos = 0
         if self.ypos < 0:
             self.ypos = 0
-        if self.xpos > settings.WIDTH:
-            self.xpos = settings.WIDTH
-        if self.ypos > settings.HEIGHT:
-            self.ypos = settings.HEIGHT
+        if self.xpos > settings.WIDTH - self.xsize:
+            self.xpos = settings.WIDTH - self.xsize
+        if self.ypos > settings.HEIGHT - self.ysize:
+            self.ypos = settings.HEIGHT - self.ysize
+
+
+class player_paddle(paddle):
+    def __init__(
+        self, xpos, ypos, xspeed, yspeed, xsize, ysize, life, controler, color
+    ):
+        super().__init__(
+            xpos, ypos, xspeed, yspeed, xsize, ysize, life, controler, color
+        )

@@ -1,14 +1,8 @@
-from model.paddle import paddle
+from model.paddle import paddle, player_paddle
 import settings
 import pygame
 import sys
 
-
-# Colors
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-BLUE = (0, 0, 255)
 
 settings.init()
 
@@ -21,10 +15,24 @@ def main():
     screen = pygame.display.set_mode((settings.WIDTH, settings.HEIGHT))
     pygame.display.set_caption("NOID")
 
-    p1_paddle = paddle(
-        settings.WIDTH / 2, settings.HEIGHT - 100, 7, 7, 50, 5, "player1"
+    # create paddles
+    paddles = []
+    paddles.append(
+        player_paddle(
+            settings.WIDTH / 2,
+            settings.HEIGHT - 100,
+            7,
+            7,
+            50,
+            10,
+            5,
+            "player",
+            settings.BLUE,
+        )
     )
-    print(p1_paddle.get_life())
+    paddles.append(
+        paddle(settings.WIDTH / 3, 100, 7, 7, 70, 15, 7, "ennemi1", settings.RED)
+    )
 
     # Main game loop
     clock = pygame.time.Clock()
@@ -35,22 +43,23 @@ def main():
                 sys.exit()
 
         # Clear the screen
-        screen.fill(BLACK)
+        screen.fill(settings.BLACK)
 
         keys = pygame.key.get_pressed()
         if keys[pygame.K_a]:
             pygame.quit()
             sys.exit()
         if keys[pygame.K_q]:
-            p1_paddle.move("LEFT")
+            paddles[0].move("LEFT")
         if keys[pygame.K_d]:
-            p1_paddle.move("RIGHT")
+            paddles[0].move("RIGHT")
         if keys[pygame.K_z]:
-            p1_paddle.move("UP")
+            paddles[0].move("UP")
         if keys[pygame.K_s]:
-            p1_paddle.move("DOWN")
+            paddles[0].move("DOWN")
 
-        p1_paddle.draw_paddle(screen, BLUE)
+        for onepaddle in paddles:
+            onepaddle.draw_paddle(screen)
 
         # Update the display
         pygame.display.flip()

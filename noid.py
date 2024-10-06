@@ -1,5 +1,6 @@
 from model.paddle import paddle, player_paddle
 from model.ball import ball
+from model.ball import ball
 import settings
 import pygame
 import sys
@@ -65,6 +66,9 @@ def main():
 
         for onepaddle in paddles:
             onepaddle.draw_paddle(screen)
+
+        for oneball in balls:
+            oneball.draw_ball(screen)
 
         for oneball in balls:
             oneball.draw_ball(screen)

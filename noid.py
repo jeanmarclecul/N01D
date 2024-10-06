@@ -37,7 +37,6 @@ def main():
     )
     paddles.append(
         paddle(settings.WIDTH / 3, 20, 7, 7, 70, 15, 7, "ennemi1", settings.RED)
-        paddle(settings.WIDTH / 3, 20, 7, 7, 70, 15, 7, "ennemi1", settings.RED)
     )
 
     # create balls

@@ -1,4 +1,5 @@
 from model.paddle import paddle, player_paddle
+from model.ball import ball
 import settings
 import pygame
 import sys
@@ -34,6 +35,10 @@ def main():
         paddle(settings.WIDTH / 3, 100, 7, 7, 70, 15, 7, "ennemi1", settings.RED)
     )
 
+    # create balls
+    balls = []
+    balls.append(ball(200, 200, 8, 5, 5, settings.WHITE))
+
     # Main game loop
     clock = pygame.time.Clock()
     while True:
@@ -60,6 +65,9 @@ def main():
 
         for onepaddle in paddles:
             onepaddle.draw_paddle(screen)
+
+        for oneball in balls:
+            oneball.draw_ball(screen)
 
         # Update the display
         pygame.display.flip()

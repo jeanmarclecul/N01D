@@ -1,4 +1,5 @@
 import pygame
+import settings
 
 
 class paddle:
@@ -38,3 +39,15 @@ class paddle:
             self.xpos -= self.xspeed
         if dir == "RIGHT":
             self.xpos += self.xspeed
+        if dir == "UP":
+            self.ypos -= self.yspeed
+        if dir == "DOWN":
+            self.ypos += self.yspeed
+        if self.xpos < 0:
+            self.xpos = 0
+        if self.ypos < 0:
+            self.ypos = 0
+        if self.xpos > settings.WIDTH:
+            self.xpos = settings.WIDTH
+        if self.ypos > settings.HEIGHT:
+            self.ypos = settings.HEIGHT

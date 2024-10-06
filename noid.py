@@ -1,6 +1,7 @@
 from model.paddle import paddle, player_paddle
 from model.ball import ball
 from model.brick import brick
+from model.brick import brick
 import settings
 import pygame
 import sys
@@ -81,6 +82,8 @@ def main():
         for oneball in balls:
             oneball.draw_ball(screen)
 
+        for onebrick in bricks:
+            onebrick.draw_brick(screen)
         for onebrick in bricks:
             onebrick.draw_brick(screen)
 

@@ -30,6 +30,7 @@ lo. indestructibles
 . multiples raquettes à éliminer
 . grosse raquette avec hachoir qui coupe balle
 . serpent nibbler
+. grosse raquette se divise en deux a chaque mort horreur rose
 
 - modes de jeux
 tout est scale avec niveau de difficulté

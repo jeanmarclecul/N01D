@@ -35,4 +35,3 @@ lo. indestructibles
 tout est scale avec niveau de difficulté
 niveaux legacy fixes
 mode infini avec randomize pour les niveau et les bosses avec scale progressif
-

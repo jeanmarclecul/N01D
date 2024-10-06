@@ -1,6 +1,6 @@
 from model.paddle import paddle, player_paddle
 from model.ball import ball
-from model.ball import ball
+from model.brick import brick
 import settings
 import pygame
 import sys
@@ -33,12 +33,17 @@ def main():
         )
     )
     paddles.append(
-        paddle(settings.WIDTH / 3, 100, 7, 7, 70, 15, 7, "ennemi1", settings.RED)
+        paddle(settings.WIDTH / 3, 20, 7, 7, 70, 15, 7, "ennemi1", settings.RED)
     )
 
     # create balls
     balls = []
     balls.append(ball(200, 200, 8, 5, 5, settings.WHITE))
+
+    # create bricks
+    bricks = []
+    bricks.append(brick(85, 85, 0, 0, 80, 20, 1, settings.GREEN, "basic"))
+    bricks.append(brick(170, 85, 0, 0, 80, 20, 1, settings.GREEN, "basic"))
 
     # Main game loop
     clock = pygame.time.Clock()
@@ -70,8 +75,8 @@ def main():
         for oneball in balls:
             oneball.draw_ball(screen)
 
-        for oneball in balls:
-            oneball.draw_ball(screen)
+        for onebrick in bricks:
+            onebrick.draw_brick(screen)
 
         # Update the display
         pygame.display.flip()

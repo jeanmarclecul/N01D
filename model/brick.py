@@ -7,13 +7,13 @@ import settings
 settings.init()
 
 brick_type = ["basic", "invul"]
-brick_color = [
-    settings.BLACK,
-    settings.BLUE,
-    settings.GREEN,
-    settings.RED,
-    settings.YELLOW,
-]
+# brick_color = [
+#     settings.BLACK,
+#     settings.BLUE,
+#     settings.GREEN,
+#     settings.RED,
+#     settings.YELLOW,
+# ]
 
 
 class brick:

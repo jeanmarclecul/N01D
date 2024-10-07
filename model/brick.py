@@ -9,9 +9,9 @@ settings.init()
 brick_type = ["basic", "invul"]
 brick_color = [
     settings.BLACK,
-    settings.BLUE,
+    settings.GREEN_LOW,
+    settings.GREEN_MID,
     settings.GREEN,
-    settings.RED,
     settings.YELLOW,
 ]
 
@@ -25,7 +25,7 @@ class brick:
         self.xsize = xsize
         self.ysize = ysize
         self.life = life
-        self.color = settings.GREEN
+        self.color = color
         self.type = type
 
     def get_xpos(self):

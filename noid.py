@@ -57,7 +57,6 @@ def main():
                 one_json_brick["xsize"],
                 one_json_brick["ysize"],
                 one_json_brick["life"],
-                one_json_brick["type"],
             )
         )
 
@@ -89,10 +88,19 @@ def main():
             onepaddle.draw(screen)
 
         for oneball in balls:
+            for onepaddle in paddles:
+                if oneball.pyball.colliderect(onepaddle.pypaddle) and oneball.ypos > 0:
+                    oneball.yspeed = -oneball.yspeed
             oneball.move()
             oneball.draw(screen)
 
         for onebrick in bricks:
+            for oneball in balls:
+                if onebrick.pybrick.colliderect(oneball.pyball):
+                    oneball.yspeed = -oneball.yspeed
+                    onebrick.damage()
+                    if onebrick.life == 0:
+                        bricks.remove(onebrick)
             onebrick.draw(screen)
 
         # Update the display

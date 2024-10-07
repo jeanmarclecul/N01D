@@ -15,6 +15,8 @@ class paddle:
         self.life = life
         self.controler = controler
         self.color = color
+        pypaddle = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
+        self.pypaddle = pypaddle
 
     def get_xpos(self):
         return self.xpos
@@ -45,6 +47,7 @@ class paddle:
 
     def draw(self, screen):
         pypaddle = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
+        self.pypaddle = pypaddle
         pygame.draw.rect(screen, self.color, pypaddle)
 
     def move(self, dir):

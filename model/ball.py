@@ -13,6 +13,8 @@ class ball:
         self.yspeed = yspeed
         self.radius = radius
         self.color = color
+        pyball = pygame.Rect(self.xpos, self.ypos, self.radius * 2, self.radius * 2)
+        self.pyball = pyball
 
     def get_xpos(self):
         return self.xpos
@@ -34,6 +36,7 @@ class ball:
 
     def draw(self, screen):
         pyball = pygame.Rect(self.xpos, self.ypos, self.radius * 2, self.radius * 2)
+        self.pyball = pyball
         pygame.draw.ellipse(screen, self.color, pyball)
 
     def move(self):

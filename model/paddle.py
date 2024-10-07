@@ -43,7 +43,7 @@ class paddle:
     def get_color(self):
         return self.color
 
-    def draw_paddle(self, screen):
+    def draw(self, screen):
         pypaddle = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
         pygame.draw.rect(screen, self.color, pypaddle)
 

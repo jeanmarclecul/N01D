@@ -54,6 +54,6 @@ class brick:
     def get_type(self):
         return self.type
 
-    def draw_brick(self, screen):
+    def draw(self, screen):
         pybrick = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
         pygame.draw.rect(screen, self.color, pybrick)

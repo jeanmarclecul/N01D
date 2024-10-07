@@ -1,4 +1,7 @@
 import pygame
+import sys
+
+sys.path.append("..")
 import settings
 
 
@@ -29,6 +32,14 @@ class ball:
     def get_color(self):
         return self.color
 
-    def draw_ball(self, screen):
+    def draw(self, screen):
         pyball = pygame.Rect(self.xpos, self.ypos, self.radius * 2, self.radius * 2)
         pygame.draw.ellipse(screen, self.color, pyball)
+
+    def move(self):
+        self.xpos += self.xspeed
+        self.ypos += self.yspeed
+        if self.xpos <= 0 or self.xpos >= settings.WIDTH:
+            self.xspeed = -self.xspeed
+        if self.ypos <= 0 or self.ypos >= settings.HEIGHT:
+            self.yspeed = -self.yspeed

@@ -86,15 +86,14 @@ def main():
             paddles[0].move("DOWN")
 
         for onepaddle in paddles:
-            onepaddle.draw_paddle(screen)
+            onepaddle.draw(screen)
 
         for oneball in balls:
-            oneball.draw_ball(screen)
+            oneball.move()
+            oneball.draw(screen)
 
         for onebrick in bricks:
-            onebrick.draw_brick(screen)
-        for onebrick in bricks:
-            onebrick.draw_brick(screen)
+            onebrick.draw(screen)
 
         # Update the display
         pygame.display.flip()

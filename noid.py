@@ -41,16 +41,26 @@ def main():
 
     # create balls
     balls = []
-    balls.append(ball(200, 200, 8, 5, 5, settings.WHITE))
+    balls.append(ball(200, 300, 8, 5, 5, settings.WHITE))
 
     # create bricks
-    fichier = open("levels/level1.json", "r+")
-    obj = json.load(fichier)
-    print(obj)
-
     bricks = []
-    bricks.append(brick(85, 85, 0, 0, 80, 20, 1, settings.GREEN, "basic"))
-    bricks.append(brick(170, 85, 0, 0, 80, 20, 1, settings.GREEN, "basic"))
+    fichier = open("levels/level1.json", "r+")
+    json_bricks = json.load(fichier)["bricks"]
+    for one_json_brick in json_bricks:
+        bricks.append(
+            brick(
+                one_json_brick["xpos"],
+                one_json_brick["ypos"],
+                one_json_brick["xspeed"],
+                one_json_brick["yspeed"],
+                one_json_brick["xsize"],
+                one_json_brick["ysize"],
+                one_json_brick["life"],
+                settings.GREEN,
+                one_json_brick["type"],
+            )
+        )
 
     # Main game loop
     clock = pygame.time.Clock()

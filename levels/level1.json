@@ -8,6 +8,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -16,6 +20,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -24,6 +32,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -32,6 +44,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -40,6 +56,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -48,6 +68,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -56,6 +80,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -64,6 +92,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -72,6 +104,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -80,6 +116,10 @@
       "ypos": 85,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -88,6 +128,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -96,6 +140,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -104,6 +152,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -112,6 +164,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -120,6 +176,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -128,6 +188,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -136,6 +200,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -144,6 +212,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -152,6 +224,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -160,6 +236,10 @@
       "ypos": 110,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -168,6 +248,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -176,6 +260,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -184,6 +272,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -192,6 +284,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -200,6 +296,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -208,6 +308,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -216,6 +320,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -224,6 +332,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -232,6 +344,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -240,6 +356,10 @@
       "ypos": 135,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -248,6 +368,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -256,6 +380,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -264,6 +392,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -272,6 +404,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -280,6 +416,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -288,6 +428,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -296,6 +440,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -304,6 +452,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -312,6 +464,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -320,6 +476,10 @@
       "ypos": 160,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -328,6 +488,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -336,6 +500,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -344,6 +512,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -352,6 +524,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -360,6 +536,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -368,6 +548,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -376,6 +560,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -384,6 +572,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -392,6 +584,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     },
     {
@@ -400,6 +596,10 @@
       "ypos": 185,
       "xsize": 80,
       "ysize": 20,
+      "xspeed": 0,
+      "yspeed": 0,
+      "life": 1,
+      "color": "GREEN",
       "type": "basic"
     }
   ]

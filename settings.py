@@ -1,6 +1,6 @@
 def init():
     global WIDTH, HEIGHT
-    WIDTH, HEIGHT = 800, 600
+    WIDTH, HEIGHT = 1024, 600
 
     # Colors
     global WHITE, BLACK, RED, BLUE, GREEN

@@ -1,5 +1,10 @@
 import pygame
+import sys
+
+sys.path.append("..")
 import settings
+
+settings.init()
 
 brick_type = ["basic", "invul"]
 brick_color = [
@@ -20,7 +25,7 @@ class brick:
         self.xsize = xsize
         self.ysize = ysize
         self.life = life
-        self.color = color
+        self.color = settings.GREEN
         self.type = type
 
     def get_xpos(self):

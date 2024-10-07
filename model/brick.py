@@ -2,6 +2,13 @@ import pygame
 import settings
 
 brick_type = ["basic", "invul"]
+brick_color = [
+    settings.BLACK,
+    settings.BLUE,
+    settings.GREEN,
+    settings.RED,
+    settings.YELLOW,
+]
 
 
 class brick:

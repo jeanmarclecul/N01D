@@ -8,7 +8,7 @@ settings.init()
 
 brick_type = ["basic", "invul"]
 brick_color = [
-    settings.BLACK,
+    settings.YELLOW,
     settings.GREEN_LOW,
     settings.GREEN_MID,
     settings.GREEN,
@@ -16,7 +16,7 @@ brick_color = [
 
 
 class brick:
-    def __init__(self, xpos, ypos, xspeed, yspeed, xsize, ysize, life, color, type):
+    def __init__(self, xpos, ypos, xspeed, yspeed, xsize, ysize, life, type):
         self.xpos = xpos
         self.ypos = ypos
         self.xspeed = xspeed
@@ -24,7 +24,7 @@ class brick:
         self.xsize = xsize
         self.ysize = ysize
         self.life = life
-        self.color = color
+        self.color = brick_color[self.life]
         self.type = type
 
     def get_xpos(self):
@@ -56,5 +56,4 @@ class brick:
 
     def draw_brick(self, screen):
         pybrick = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
-        color = getattr(settings, self.color)
-        pygame.draw.rect(screen, color, pybrick)
+        pygame.draw.rect(screen, self.color, pybrick)

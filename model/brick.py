@@ -12,7 +12,6 @@ brick_color = [
     settings.GREEN_LOW,
     settings.GREEN_MID,
     settings.GREEN,
-    settings.YELLOW,
 ]
 
 
@@ -57,4 +56,5 @@ class brick:
 
     def draw_brick(self, screen):
         pybrick = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
-        pygame.draw.rect(screen, self.color, pybrick)
+        color = getattr(settings, self.color)
+        pygame.draw.rect(screen, color, pybrick)

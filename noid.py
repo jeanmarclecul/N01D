@@ -57,7 +57,7 @@ def main():
                 one_json_brick["xsize"],
                 one_json_brick["ysize"],
                 one_json_brick["life"],
-                settings.GREEN,
+                one_json_brick["color"],
                 one_json_brick["type"],
             )
         )

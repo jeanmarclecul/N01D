@@ -5,7 +5,7 @@ from model.brick import brick
 import settings
 import pygame
 import sys
-import json
+import json, os
 
 
 settings.init()

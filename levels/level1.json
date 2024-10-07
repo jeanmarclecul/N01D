@@ -10,7 +10,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -21,7 +21,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -32,7 +32,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -43,7 +43,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -54,7 +54,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -65,7 +65,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -76,7 +76,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -87,7 +87,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -98,7 +98,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -109,7 +109,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 3,
       "type": "basic"
     },
     {
@@ -120,7 +120,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -131,7 +131,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -142,7 +142,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -153,7 +153,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -164,7 +164,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -175,7 +175,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -186,7 +186,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -197,7 +197,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -208,7 +208,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -219,7 +219,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -230,7 +230,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -241,7 +241,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -252,7 +252,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -263,7 +263,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -274,7 +274,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -285,7 +285,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -296,7 +296,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -307,7 +307,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -318,7 +318,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {
@@ -329,7 +329,7 @@
       "ysize": 20,
       "xspeed": 0,
       "yspeed": 0,
-      "life": 1,
+      "life": 2,
       "type": "basic"
     },
     {

@@ -5,7 +5,7 @@ from model.brick import brick
 import settings
 import pygame
 import sys
-import json, os
+import json
 
 
 settings.init()
@@ -15,7 +15,6 @@ def load_level():
     fichier = open("levels/level1.json", "r+")
     json_fichier = json.load(fichier)
 
-    # create paddles
     settings.paddles.append(
         player_paddle(
             settings.WIDTH / 2, settings.HEIGHT - 100, 7, 7, 50, 10, 5, "player", 0
@@ -93,21 +92,17 @@ def bricks_management():
 
 
 def init_game():
-    # Initialize Pygame
     pygame.init()
 
-    # Create the screen
     global screen
     screen = pygame.display.set_mode((settings.WIDTH, settings.HEIGHT))
     pygame.display.set_caption("NOID")
 
-    # Main game loop
     global clock
     clock = pygame.time.Clock()
 
 
 def clear_screen():
-    # Clear the screen
     screen.fill(settings.BLACK)
 
 
@@ -126,6 +121,17 @@ def key_managment():
         settings.paddles[0].move("DOWN")
 
 
+def player_winloose_condition():
+    if settings.bricks == []:
+        print("WIN")
+        pygame.quit()
+        sys.exit()
+    if settings.paddles[0].life == 0:
+        print("GAME OVER")
+        pygame.quit()
+        sys.exit()
+
+
 def update_display():
     pygame.display.flip()
     clock.tick(60)
@@ -138,14 +144,14 @@ def main():
 
     while True:
         check_events()
-
         clear_screen()
-
         key_managment()
 
         paddles_management()
         balls_management()
         bricks_management()
+
+        player_winloose_condition()
 
         update_display()
 

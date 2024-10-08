@@ -75,6 +75,10 @@ class paddle:
         if self.ypos > settings.HEIGHT - self.ysize:
             self.ypos = settings.HEIGHT - self.ysize
 
+    def damage(self):
+        self.life -= 1
+        self.xsize -= 10
+
 
 class player_paddle(paddle):
     def __init__(

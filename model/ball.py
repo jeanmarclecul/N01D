@@ -59,3 +59,5 @@ class ball:
         for onepaddle in settings.paddles:
             if self.pyball.colliderect(onepaddle.pypaddle) and self.ypos > 0:
                 self.yspeed = -self.yspeed
+        if self.ypos >= settings.HEIGHT:
+            settings.paddles[0].damage()

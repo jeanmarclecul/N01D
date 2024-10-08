@@ -6,6 +6,8 @@ import settings
 
 settings.init()
 
+paddle_color = [settings.BLUE, settings.RED]
+
 
 class paddle:
     def __init__(
@@ -19,7 +21,7 @@ class paddle:
         self.ysize = ysize
         self.life = life
         self.controler = controler
-        self.color = color
+        self.color = paddle_color[color]
         pypaddle = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
         self.pypaddle = pypaddle
 

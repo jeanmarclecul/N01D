@@ -17,19 +17,11 @@ def load_level():
     # create paddles
     settings.paddles.append(
         player_paddle(
-            settings.WIDTH / 2,
-            settings.HEIGHT - 100,
-            7,
-            7,
-            50,
-            10,
-            5,
-            "player",
-            settings.BLUE,
+            settings.WIDTH / 2, settings.HEIGHT - 100, 7, 7, 50, 10, 5, "player", 0
         )
     )
     settings.paddles.append(
-        paddle(settings.WIDTH / 3, 20, 7, 7, 70, 15, 7, "ennemi1", settings.RED)
+        paddle(settings.WIDTH / 3, 20, 7, 7, 70, 15, 7, "ennemi1", 1)
     )
 
     # create balls

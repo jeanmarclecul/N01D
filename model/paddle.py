@@ -77,7 +77,8 @@ class paddle:
             self.xpos += self.xspeed
         if dir == "UP" and (self.damage_zone == "BOTTOM" and self.ypos > self.ymax):
             self.ypos -= self.yspeed
-        if dir == "DOWN" and (self.damage_zone == "TOP" and self.ypos < self.ymax):
+        if dir == "DOWN":
+            # and (self.damage_zone == "TOP" and self.ypos < self.ymax):
             self.ypos += self.yspeed
         if self.xpos < 0:
             self.xpos = 0

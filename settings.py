@@ -18,3 +18,7 @@ def init():
     paddles = []
     balls = []
     bricks = []
+
+    global mouse_x, mouse_y
+    mouse_x = 1
+    mouse_y = 1

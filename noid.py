@@ -80,6 +80,7 @@ def load_level():
 def check_events():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+            pygame.mouse.set_visible(True)
             pygame.quit()
             sys.exit()
 
@@ -114,6 +115,8 @@ def init_game():
     global clock
     clock = pygame.time.Clock()
 
+    pygame.mouse.set_visible(False)
+
 
 def clear_screen():
     screen.fill(settings.BLACK)
@@ -121,17 +124,22 @@ def clear_screen():
 
 def key_managment():
     keys = pygame.key.get_pressed()
+    settings.mouse_x, settings.mouse_y = pygame.mouse.get_rel()
+
     if keys[pygame.K_a]:
+        pygame.mouse.set_visible(True)
         pygame.quit()
         sys.exit()
-    if keys[pygame.K_q]:
+
+    if keys[pygame.K_q] or settings.mouse_x < 0:
         settings.paddles[0].move("LEFT")
-    if keys[pygame.K_d]:
+    if keys[pygame.K_d] or settings.mouse_x > 0:
         settings.paddles[0].move("RIGHT")
-    if keys[pygame.K_z]:
+    if keys[pygame.K_z] or settings.mouse_y < 0:
         settings.paddles[0].move("UP")
-    if keys[pygame.K_s]:
+    if keys[pygame.K_s] or settings.mouse_y > 0:
         settings.paddles[0].move("DOWN")
+    pygame.mouse.set_pos(settings.WIDTH // 2, settings.HEIGHT // 2)
 
 
 def player_winloose_condition():

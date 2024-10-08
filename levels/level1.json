@@ -14,6 +14,16 @@
       "color": 1
     }
   ],
+  "ball": [
+    {
+      "xpos": 200,
+      "ypos": 300,
+      "size": 8,
+      "xspeed": 5,
+      "yspeed": 5,
+      "color": 0
+    }
+  ],
   "bricks": [
     {
       "id": "001",

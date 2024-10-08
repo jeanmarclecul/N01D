@@ -4,6 +4,14 @@ import sys
 sys.path.append("..")
 import settings
 
+ball_color = [
+    settings.WHITE,
+    settings.GREEN,
+    settings.CYAN,
+    settings.BLUE,
+    settings.RED,
+]
+
 
 class ball:
     def __init__(self, xpos, ypos, radius, xspeed, yspeed, color):
@@ -12,7 +20,7 @@ class ball:
         self.xspeed = xspeed
         self.yspeed = yspeed
         self.radius = radius
-        self.color = color
+        self.color = ball_color[color]
         pyball = pygame.Rect(self.xpos, self.ypos, self.radius * 2, self.radius * 2)
         self.pyball = pyball
 

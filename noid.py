@@ -38,10 +38,19 @@ def load_level():
             )
         )
 
-    # create balls
-    settings.balls.append(ball(200, 300, 8, 5, 5, settings.WHITE))
+    json_balls = json_fichier["ball"]
+    for one_json_ball in json_balls:
+        settings.balls.append(
+            ball(
+                one_json_ball["xpos"],
+                one_json_ball["ypos"],
+                one_json_ball["size"],
+                one_json_ball["xspeed"],
+                one_json_ball["yspeed"],
+                one_json_ball["color"],
+            )
+        )
 
-    # create bricks
     json_bricks = json_fichier["bricks"]
     for one_json_brick in json_bricks:
         settings.bricks.append(

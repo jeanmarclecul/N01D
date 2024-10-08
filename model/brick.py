@@ -61,3 +61,13 @@ class brick:
         self.life -= 1
         if self.life > 0:
             self.color = brick_color[self.life]
+
+    def collide(self):
+        for oneball in settings.balls:
+            if self.pybrick.colliderect(oneball.pyball):
+                oneball.yspeed = -oneball.yspeed
+                self.damage()
+
+    def status(self):
+        if self.life == 0:
+            settings.bricks.remove(self)

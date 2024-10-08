@@ -1,5 +1,10 @@
 import pygame
+import sys
+
+sys.path.append("..")
 import settings
+
+settings.init()
 
 
 class paddle:

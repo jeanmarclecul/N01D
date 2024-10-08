@@ -46,3 +46,8 @@ class ball:
             self.xspeed = -self.xspeed
         if self.ypos <= 0 or self.ypos >= settings.HEIGHT:
             self.yspeed = -self.yspeed
+
+    def collide(self):
+        for onepaddle in settings.paddles:
+            if self.pyball.colliderect(onepaddle.pypaddle) and self.ypos > 0:
+                self.yspeed = -self.yspeed

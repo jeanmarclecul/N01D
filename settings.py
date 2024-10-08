@@ -13,3 +13,8 @@ def init():
     GREEN = (0, 255, 0)
     GREEN_MID = (0, 155, 0)
     GREEN_LOW = (0, 55, 0)
+
+    global paddles, balls, bricks
+    paddles = []
+    balls = []
+    bricks = []

@@ -1,6 +1,19 @@
 {
   "id": "lvl001",
   "name": "classico",
+  "ennemi": [
+    {
+      "name": "first ennemi",
+      "xpos": 400,
+      "ypos": 20,
+      "xspeed": 7,
+      "yspeed": 7,
+      "xsize": 70,
+      "ysize": 15,
+      "life": 7,
+      "color": 1
+    }
+  ],
   "bricks": [
     {
       "id": "001",

@@ -13,6 +13,7 @@ settings.init()
 
 def load_level():
     fichier = open("levels/level1.json", "r+")
+    json_fichier = json.load(fichier)
 
     # create paddles
     settings.paddles.append(
@@ -20,15 +21,28 @@ def load_level():
             settings.WIDTH / 2, settings.HEIGHT - 100, 7, 7, 50, 10, 5, "player", 0
         )
     )
-    settings.paddles.append(
-        paddle(settings.WIDTH / 3, 20, 7, 7, 70, 15, 7, "ennemi1", 1)
-    )
+
+    json_ennemis = json_fichier["ennemi"]
+    for one_json_ennemi in json_ennemis:
+        settings.paddles.append(
+            paddle(
+                one_json_ennemi["xpos"],
+                one_json_ennemi["ypos"],
+                one_json_ennemi["xspeed"],
+                one_json_ennemi["yspeed"],
+                one_json_ennemi["xsize"],
+                one_json_ennemi["ysize"],
+                one_json_ennemi["life"],
+                one_json_ennemi["name"],
+                one_json_ennemi["color"],
+            )
+        )
 
     # create balls
     settings.balls.append(ball(200, 300, 8, 5, 5, settings.WHITE))
 
     # create bricks
-    json_bricks = json.load(fichier)["bricks"]
+    json_bricks = json_fichier["bricks"]
     for one_json_brick in json_bricks:
         settings.bricks.append(
             brick(

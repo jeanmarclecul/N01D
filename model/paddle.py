@@ -11,7 +11,18 @@ paddle_color = [settings.BLUE, settings.RED]
 
 class paddle:
     def __init__(
-        self, xpos, ypos, xspeed, yspeed, xsize, ysize, life, controler, color
+        self,
+        xpos,
+        ypos,
+        xspeed,
+        yspeed,
+        xsize,
+        ysize,
+        life,
+        controler,
+        color,
+        damage_zone,
+        ymax,
     ):
         self.xpos = xpos
         self.ypos = ypos
@@ -22,6 +33,8 @@ class paddle:
         self.life = life
         self.controler = controler
         self.color = paddle_color[color]
+        self.damage_zone = damage_zone
+        self.ymax = ymax
         pypaddle = pygame.Rect(self.xpos, self.ypos, self.xsize, self.ysize)
         self.pypaddle = pypaddle
 
@@ -62,9 +75,9 @@ class paddle:
             self.xpos -= self.xspeed
         if dir == "RIGHT":
             self.xpos += self.xspeed
-        if dir == "UP":
+        if dir == "UP" and (self.damage_zone == "BOTTOM" and self.ypos > self.ymax):
             self.ypos -= self.yspeed
-        if dir == "DOWN":
+        if dir == "DOWN" and (self.damage_zone == "TOP" and self.ypos < self.ymax):
             self.ypos += self.yspeed
         if self.xpos < 0:
             self.xpos = 0
@@ -79,11 +92,36 @@ class paddle:
         self.life -= 1
         self.xsize -= 10
 
+    def status(self):
+        if self.life == 0:
+            settings.paddles.remove(self)
+
 
 class player_paddle(paddle):
     def __init__(
-        self, xpos, ypos, xspeed, yspeed, xsize, ysize, life, controler, color
+        self,
+        xpos,
+        ypos,
+        xspeed,
+        yspeed,
+        xsize,
+        ysize,
+        life,
+        controler,
+        color,
+        damage_zone,
+        ymax,
     ):
         super().__init__(
-            xpos, ypos, xspeed, yspeed, xsize, ysize, life, controler, color
+            xpos,
+            ypos,
+            xspeed,
+            yspeed,
+            xsize,
+            ysize,
+            life,
+            controler,
+            color,
+            damage_zone,
+            ymax,
         )

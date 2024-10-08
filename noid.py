@@ -17,7 +17,17 @@ def load_level():
 
     settings.paddles.append(
         player_paddle(
-            settings.WIDTH / 2, settings.HEIGHT - 100, 7, 7, 50, 10, 5, "player", 0
+            settings.WIDTH / 2,
+            settings.HEIGHT - 100,
+            7,
+            7,
+            50,
+            10,
+            5,
+            "player",
+            0,
+            "BOTTOM",
+            400,
         )
     )
 
@@ -34,6 +44,8 @@ def load_level():
                 one_json_ennemi["life"],
                 one_json_ennemi["name"],
                 one_json_ennemi["color"],
+                one_json_ennemi["damage_zone"],
+                one_json_ennemi["ymax"],
             )
         )
 
@@ -74,6 +86,7 @@ def check_events():
 
 def paddles_management():
     for onepaddle in settings.paddles:
+        onepaddle.status()
         onepaddle.draw(screen)
 
 

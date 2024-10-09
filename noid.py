@@ -12,7 +12,7 @@ settings.init()
 
 
 def load_level():
-    fichier = open("levels/level1.json", "r+")
+    fichier = open("levels/level2.json", "r+")
     json_fichier = json.load(fichier)
 
     settings.paddles.append(

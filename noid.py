@@ -101,7 +101,6 @@ def balls_management():
 def bricks_management():
     for onebrick in settings.bricks:
         onebrick.collide()
-        onebrick.status()
         onebrick.draw(screen)
 
 

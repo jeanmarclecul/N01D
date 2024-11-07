@@ -58,15 +58,17 @@ class brick:
         pygame.draw.rect(screen, self.color, pybrick)
 
     def damage(self):
-        self.life -= 1
         if self.life > 0:
+            self.life -= 1
             self.color = brick_color[self.life]
 
     def collide(self):
         for oneball in settings.balls:
             if self.pybrick.colliderect(oneball.pyball):
                 oneball.yspeed = -oneball.yspeed
-                self.damage()
+                if self.life > 0:
+                    self.damage()
+                    self.status()
 
     def status(self):
         if self.life == 0:

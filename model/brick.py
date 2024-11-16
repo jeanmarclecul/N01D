@@ -65,7 +65,7 @@ class brick:
     def collide(self):
         for oneball in settings.balls:
             if self.pybrick.colliderect(oneball.pyball):
-                oneball.yspeed = -oneball.yspeed
+                oneball.speed[1] = -oneball.speed[1]
                 if self.life > 0:
                     self.damage()
                     self.status()

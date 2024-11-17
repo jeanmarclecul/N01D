@@ -18,12 +18,12 @@ def load_level():
     settings.paddles.append(
         player_paddle(
             settings.WIDTH / 2,
-            settings.HEIGHT - 100,
+            settings.HEIGHT - 50,
             7,
             7,
-            50,
+            100,
             10,
-            5,
+            10,
             "player",
             0,
             "BOTTOM",
@@ -101,7 +101,6 @@ def balls_management():
 def bricks_management():
     for onebrick in settings.bricks:
         onebrick.collide()
-        onebrick.status()
         onebrick.draw(screen)
 
 
@@ -115,7 +114,10 @@ def init_game():
     global clock
     clock = pygame.time.Clock()
 
+
+def start_game():
     pygame.mouse.set_visible(False)
+    pygame.mouse.set_pos(settings.paddles[0].xpos, settings.paddles[0].ypos)
 
 
 def clear_screen():
@@ -124,22 +126,23 @@ def clear_screen():
 
 def key_managment():
     keys = pygame.key.get_pressed()
-    settings.mouse_x, settings.mouse_y = pygame.mouse.get_rel()
 
     if keys[pygame.K_a]:
         pygame.mouse.set_visible(True)
         pygame.quit()
         sys.exit()
 
-    if keys[pygame.K_q] or settings.mouse_x < 0:
+    settings.paddles[0].xpos = pygame.mouse.get_pos()[0]
+    # settings.paddles[0].ypos = pygame.mouse.get_pos()[1]2
+
+    if keys[pygame.K_q]:
         settings.paddles[0].move("LEFT")
-    if keys[pygame.K_d] or settings.mouse_x > 0:
+    if keys[pygame.K_d]:
         settings.paddles[0].move("RIGHT")
-    if keys[pygame.K_z] or settings.mouse_y < 0:
+    if keys[pygame.K_z]:
         settings.paddles[0].move("UP")
-    if keys[pygame.K_s] or settings.mouse_y > 0:
+    if keys[pygame.K_s]:
         settings.paddles[0].move("DOWN")
-    pygame.mouse.set_pos(settings.WIDTH // 2, settings.HEIGHT // 2)
 
 
 def player_winloose_condition():
@@ -162,6 +165,8 @@ def main():
     init_game()
 
     load_level()
+
+    start_game()
 
     while True:
         check_events()

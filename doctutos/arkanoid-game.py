@@ -19,6 +19,7 @@ BLUE = (0, 0, 255)
 GREEN = (0, 255, 0)
 YELLOW = (255, 255, 0)
 
+
 class Paddle:
     WIDTH = 100
     HEIGHT = 20
@@ -36,6 +37,7 @@ class Paddle:
 
     def draw(self, surface):
         pygame.draw.rect(surface, self.color, self.rect)
+
 
 class PlayerPaddle(Paddle):
     def __init__(self):
@@ -55,6 +57,7 @@ class PlayerPaddle(Paddle):
 
     def toggle_control(self):
         self.mouse_control_active = not self.mouse_control_active
+
 
 class EnemyPaddle(Paddle):
     def __init__(self, difficulty):
@@ -81,23 +84,30 @@ class EnemyPaddle(Paddle):
 
         self.move(self.target_x, 1)  # Use smoothing factor of 1 for immediate movement
 
+
 class Ball:
     SIZE = 15
-    
+
     def __init__(self):
-        self.rect = pygame.Rect(WIDTH // 2 - self.SIZE // 2, HEIGHT // 2 - self.SIZE // 2, self.SIZE, self.SIZE)
+        self.rect = pygame.Rect(
+            WIDTH // 2 - self.SIZE // 2,
+            HEIGHT // 2 - self.SIZE // 2,
+            self.SIZE,
+            self.SIZE,
+        )
         self.speed = [random.choice([-5, 5]), random.choice([-5, 5])]
         self.active = True
-    
+
     def move(self):
         self.rect.x += self.speed[0]
-        self.rect.y += self.speed[1]
-    
+        self.rect.y += self.speed[0]
+
     def bounce(self, axis):
         self.speed[axis] *= -1
 
     def draw(self, surface):
         pygame.draw.ellipse(surface, RED, self.rect)
+
 
 class Brick:
     WIDTH = 80
@@ -115,36 +125,45 @@ class Brick:
     def draw(self, surface):
         pygame.draw.rect(surface, self.color, self.rect)
 
+
 class Level:
     def __init__(self, layout):
         self.bricks = []
         for row, line in enumerate(layout):
             for col, char in enumerate(line):
-                if char != ' ':
+                if char != " ":
                     color = BLUE
                     strength = 1
-                    if char == '2':
+                    if char == "2":
                         color = GREEN
                         strength = 2
-                    elif char == '3':
+                    elif char == "3":
                         color = RED
                         strength = 3
-                    self.bricks.append(Brick(col * Brick.WIDTH, row * Brick.HEIGHT + 50, color, strength))
+                    self.bricks.append(
+                        Brick(
+                            col * Brick.WIDTH, row * Brick.HEIGHT + 50, color, strength
+                        )
+                    )
+
 
 def generate_levels(num_levels):
     levels = []
     for _ in range(num_levels):
         layout = []
         for row in range(8):
-            line = ''
+            line = ""
             for col in range(10):
                 if random.random() < 0.7:  # 70% chance of a brick
-                    line += str(random.choices(['1', '2', '3'], weights=[0.6, 0.3, 0.1])[0])
+                    line += str(
+                        random.choices(["1", "2", "3"], weights=[0.6, 0.3, 0.1])[0]
+                    )
                 else:
-                    line += ' '
+                    line += " "
             layout.append(line)
         levels.append(Level(layout))
     return levels
+
 
 class Game:
     def __init__(self):
@@ -198,15 +217,21 @@ class Game:
             # Ball collision with paddles
             for paddle in (self.player_paddle, self.enemy_paddle):
                 if ball.rect.colliderect(paddle.rect):
-                    relative_intersect_x = (paddle.rect.centerx - ball.rect.centerx) / (Paddle.WIDTH / 2)
+                    relative_intersect_x = (paddle.rect.centerx - ball.rect.centerx) / (
+                        Paddle.WIDTH / 2
+                    )
                     bounce_angle = relative_intersect_x * (math.pi / 3)
-                    speed = math.sqrt(ball.speed[0]**2 + ball.speed[1]**2)
+                    speed = math.sqrt(ball.speed[0] ** 2 + ball.speed[1] ** 2)
                     ball.speed[0] = -speed * math.sin(bounce_angle)
                     ball.speed[1] = -speed * math.cos(bounce_angle)
                     if paddle == self.enemy_paddle:
-                        ball.speed[1] = abs(ball.speed[1])  # Ensure the ball moves downward
+                        ball.speed[1] = abs(
+                            ball.speed[1]
+                        )  # Ensure the ball moves downward
                     else:
-                        ball.speed[1] = -abs(ball.speed[1])  # Ensure the ball moves upward
+                        ball.speed[1] = -abs(
+                            ball.speed[1]
+                        )  # Ensure the ball moves upward
 
             # Ball collision with bricks
             for brick in self.bricks[:]:
@@ -244,7 +269,9 @@ class Game:
             brick.draw(screen)
 
         # Draw control mode indicator and ball count
-        control_text = "Mouse" if self.player_paddle.mouse_control_active else "Keyboard"
+        control_text = (
+            "Mouse" if self.player_paddle.mouse_control_active else "Keyboard"
+        )
         ball_count_text = f"Balls: {len(self.balls)}"
         level_text = f"Level: {self.current_level + 1}"
         control_surface = self.font.render(f"Control: {control_text}", True, WHITE)
@@ -255,7 +282,9 @@ class Game:
         screen.blit(level_surface, (WIDTH // 2 - 50, HEIGHT - 40))
 
         if self.game_over:
-            game_over_text = self.font.render("GAME OVER - Press R to Restart", True, RED)
+            game_over_text = self.font.render(
+                "GAME OVER - Press R to Restart", True, RED
+            )
             screen.blit(game_over_text, (WIDTH // 2 - 150, HEIGHT // 2))
         elif self.game_won:
             win_text = self.font.render("YOU WON! - Press R to Restart", True, GREEN)
@@ -272,6 +301,7 @@ class Game:
             self.draw()
 
             self.clock.tick(60)
+
 
 if __name__ == "__main__":
     game = Game()

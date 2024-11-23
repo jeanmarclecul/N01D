@@ -1,7 +1,6 @@
 from model.paddle import paddle, player_paddle
 from model.ball import ball
 from model.brick import brick
-from model.brick import brick
 import settings
 import pygame
 import sys
